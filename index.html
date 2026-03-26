@@ -24,28 +24,18 @@
         <p class="mensagem">
             Eu te amo muito! 💕
         </p>
-        <button onclick="mostrarAmor()" class="botao-amor">Clique para espalhar amor 💕</button>
+        <button onclick="mostrarMensagem()" class="botao-amor">
+    Clique para ver uma mensagem 💌
+</button>
+        <p id="mensagemOculta" style="display: none; margin-top:20px; font-size:1.3em;">
+    💖 Mãe, você é a melhor do mundo! Obrigado por tudo, Geiza! Te amo muito! 💖
+</p>
 
-<div id="coracoes"></div>
-    </div>
+
+
 <script>
-function mostrarAmor() {
-    const container = document.getElementById("coracoes");
-
-    for (let i = 0; i < 15; i++) {
-        const coracao = document.createElement("div");
-        coracao.classList.add("coracao");
-        coracao.innerHTML = "💖";
-
-        coracao.style.left = Math.random() * 100 + "vw";
-        coracao.style.top = "80vh";
-
-        container.appendChild(coracao);
-
-        setTimeout(() => {
-            coracao.remove();
-        }, 2000);
-    }
+function mostrarMensagem() {
+    document.getElementById("mensagemOculta").style.display = "block";
 }
 </script>
 </body>
