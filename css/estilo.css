@@ -1,97 +1,62 @@
-* {
+/* Reset básico */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: "Georgia", "Times New Roman", serif;
+    background-color: #f8f5f0;
+    color: #333;
 }
 
-body {
-    height: 100vh;
-    font-family: 'Segoe UI', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #ff758c, #ff7eb3, #fad0c4);
-    background-size: 300% 300%;
-    animation: gradientMove 10s ease infinite;
-    overflow: hidden;
-}
-
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-body::before,
-body::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.3;
-}
-
-body::before {
-    width: 300px;
-    height: 300px;
-    background: #ffffff;
-    top: -80px;
-    left: -80px;
-}
-
-body::after {
-    width: 200px;
-    height: 200px;
-    background: #ff0066;
-    bottom: -60px;
-    right: -60px;
-}
-
+/* Container central estilo carta */
 .container {
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.2);
-    padding: 40px;
-    border-radius: 20px;
+    width: 60%;
+    margin: 80px auto;
+    padding: 50px;
+    background-color: #ffffff;
+    border: 1px solid #d6d1c4;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    color: white;
-    max-width: 500px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    border-radius: 8px;
 }
 
+/* Título */
 h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 2.3em;
+    margin-bottom: 25px;
+    color: #5a3e36;
 }
 
+/* Parágrafos */
 p {
     font-size: 1.2em;
+    line-height: 1.7;
     margin: 15px 0;
 }
 
+/* Nome com destaque elegante */
 .nome {
-    display: inline-block;
-    font-size: 1.8em;
     font-weight: bold;
-    padding: 8px 15px;
-    border-radius: 12px;
-    background: linear-gradient(45deg, #ff0066, #ffcc00);
-    color: #fff;
-    box-shadow: 0 0 15px rgba(255, 0, 102, 0.8);
-    animation: brilho 2s infinite alternate;
+    color: #b22222; /* vermelho clássico */
+    font-size: 1.4em;
+    border-bottom: 2px solid #b22222;
+    padding: 2px 6px;
+    background-color: #fff5f5;
+    border-radius: 4px;
 }
 
-@keyframes brilho {
-    from {
-        transform: scale(1);
-        box-shadow: 0 0 10px rgba(255, 0, 102, 0.6);
-    }
-    to {
-        transform: scale(1.1);
-        box-shadow: 0 0 25px rgba(255, 204, 0, 1);
-    }
-}
-
+/* Mensagem final */
 .mensagem {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-top: 20px;
+    margin-top: 30px;
+    font-size: 1.4em;
+    font-style: italic;
+    color: #6b4c4c;
+}
+
+/* Detalhe decorativo sutil */
+.container::before {
+    content: "❦";
+    display: block;
+    font-size: 2em;
+    color: #b22222;
+    margin-bottom: 15px;
 }
