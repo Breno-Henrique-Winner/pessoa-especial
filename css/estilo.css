@@ -1,61 +1,39 @@
 body {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #fff0f5;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    text-align: center;
     color: #333;
 }
 
-header {
-    background-color: #ff69b4;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
+.container {
+    margin-top: 100px;
 }
 
-header h1 {
-    margin: 0;
+h1 {
     font-size: 2.5em;
+    color: #fff;
 }
 
-.mensagem {
-    padding: 30px;
-    text-align: center;
-}
-
-.mensagem h2 {
-    color: #ff1493;
-}
-
-.mensagem p {
+p {
     font-size: 1.2em;
-    margin: 15px 0;
+    margin: 20px;
 }
 
-.destaque {
+/* Destaque do nome */
+.nome {
+    color: #ff0066;
     font-weight: bold;
-    color: #d63384;
-    font-size: 1.4em;
+    font-size: 1.5em;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
 }
 
-.memorias {
-    background-color: #ffe4e1;
-    padding: 30px;
-    text-align: center;
-}
-
-.memorias ul {
-    list-style: none;
-    padding: 0;
-}
-
-.memorias li {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-
-footer {
-    background-color: #ff69b4;
-    color: white;
-    text-align: center;
-    padding: 15px;
+/* Mensagem final */
+.mensagem {
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: bold;
 }
