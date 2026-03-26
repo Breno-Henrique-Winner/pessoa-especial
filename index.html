@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Homenagem</title>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="estilo.css">
+	<title> Mamãe </title>
+	<link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
 
@@ -24,7 +24,29 @@
         <p class="mensagem">
             Eu te amo muito! 💕
         </p>
-    </div>
+        <button onclick="mostrarAmor()" class="botao-amor">Clique para espalhar amor 💕</button>
 
+<div id="coracoes"></div>
+    </div>
+<script>
+function mostrarAmor() {
+    const container = document.getElementById("coracoes");
+
+    for (let i = 0; i < 15; i++) {
+        const coracao = document.createElement("div");
+        coracao.classList.add("coracao");
+        coracao.innerHTML = "💖";
+
+        coracao.style.left = Math.random() * 100 + "vw";
+        coracao.style.top = "80vh";
+
+        container.appendChild(coracao);
+
+        setTimeout(() => {
+            coracao.remove();
+        }, 2000);
+    }
+}
+</script>
 </body>
 </html>
